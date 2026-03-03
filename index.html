@@ -2,60 +2,92 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>稲垣さんの自己紹介</title>
-<style>
-    body {
-        background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-        color: #ffffff;
-        font-family: 'Segoe UI', sans-serif;
-        text-align: center;
-        padding: 50px;
-    }
-    .card {
-        background: rgba(255, 255, 255, 0.08);
-        padding: 40px;
-        border-radius: 15px;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        max-width: 600px;
-        margin: auto;
-    }
-    h1 {
-        font-size: 40px;
-        letter-spacing: 3px;
-        margin-bottom: 10px;
-    }
-    .subtitle {
-        font-size: 18px;
-        color: #00d4ff;
-        margin-bottom: 30px;
-    }
-    p {
-        font-size: 18px;
-        line-height: 1.8;
-    }
-    .highlight {
-        color: #00ffd5;
-        font-weight: bold;
-    }
-</style>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inagaki's Portfolio</title>
+    <style>
+        /* 全体のスタイル設定 */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0f172a; /* 深みのあるネイビーブラック */
+            color: #f8fafc;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
 
-<div class="card">
-    <h1>INAGAKI</h1>
-    <div class="subtitle">Innovator / Challenger / Creator</div>
-    <p>
-        こんにちは、<span class="highlight">稲垣</span>です。<br>
-        常に<span class="highlight">挑戦</span>を楽しみ、<span class="highlight">成長</span>を止めないことを信条としています。<br>
-        新しいアイデアを形にし、周囲にポジティブな影響を与える存在でありたいと考えています。
-    </p>
-    <p>
-        未来は待つものではなく、<span class="highlight">創るもの</span>。<br>
-        一歩先へ。
-    </p>
-</div>
+        /* カードのデザイン */
+        .profile-card {
+            text-align: center;
+            padding: 3rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            max-width: 400px;
+            width: 90%;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
 
-</body>
-</html>
+        /* アニメーション */
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 苗字の強調 */
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 0.2rem;
+            background: linear-gradient(to right, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.title {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.3rem;
+            margin-bottom: 2rem;
+        }
+
+        .description {
+            line-height: 1.6;
+            color: #cbd5e1;
+            margin-bottom: 2rem;
+        }
+
+        /* 装飾的なライン */
+        .divider {
+            width: 50px;
+            height: 2px;
+            background: #60a5fa;
+            margin: 1rem auto;
+        }
+
+        /* ボタン（SNSや連絡先用） */
+        .contact-btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 1px solid #60a5fa;
+            color: #60a5fa;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+
+        .contact-btn:hover {
+            background: #60a5fa;
+            color: #0f172a;
